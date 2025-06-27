@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin : 0;
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 640px;
+}
+
+.subcontainer {
+    text-align: center;
+}
+
+.inputArea {
+    background-color: bisque;
+    padding : 20px;
+}
+
+.inputArea #inputBox {
+    width:60%;
+    height: 45px;
+    border: 1px solid #eee;
+    font-size : 1.3em;
+    padding : 10px;
+}
+
+.inputArea #inputBox:focus {
+    outline: none;
+}
+
+.inputArea #addBtn,
+.inputArea #clearAllBtn { /* 전체삭제 버튼 스타일 포함 */
+    width: 90px;
+    height: 45px;
+    font-size: 1.2em;
+    vertical-align: bottom;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* 전체삭제 버튼은 구분을 위해 다른 배경색 적용해도 좋음 */
+#clearAllBtn {
+    background-color: lightcoral;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+#todolist {
+    background-color: azure;
+    display : none;
+    list-style : none;
+    font-size : 1.2em;
+    text-align : left;
+}
+
+#todolist li {
+    padding:10px;
+}
+
+#todolist .checkBtn {
+    border : 2px solid brown;
+    width : 20px;
+    height : 20px;
+    border-radius : 4px;
+    margin : 5px;
+    margin-right : 10px;
+    cursor: pointer;
+}
+
+#todolist .delBtn {
+    background-color: transparent;
+    border : none;
+    cursor: pointer;
+    color : brown;
+    font-weight : bold;
+    font-size : 1.2em
+}
+
+#todolist .check {
+    text-decoration: line-through;
+    color : #999;
+}
