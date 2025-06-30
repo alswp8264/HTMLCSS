@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자리 배치표</title>
+    <link rel="stylesheet" href="sit.css">
+</head>
+<body>
+    <div class="container">
+    <h1>자리 배치표</h1>
+    <table>
+        <script>
+            let tlength = 34;
+            let col = 6;
+            let total = Math.ceil(tlength / col);
+            let seatNum = 1;
+
+            for (let i = 0; i < total; i++) {
+                document.write("<tr>");
+                for (let j = 0; j < col; j++) {
+                    if (seatNum <= tlength) {
+                        document.write("<td>좌석 " + seatNum + "</td>");
+                        seatNum++;
+                    } else {
+                        document.write("<td></td>"); // 남는 칸은 빈칸 처리
+                    }
+                }
+                document.write("</tr>");
+            }
+        </script>
+    </table>
+    </div>
+</body>
+</html>
