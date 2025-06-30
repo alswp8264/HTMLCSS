@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .set{
+            width: 600px;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            background-color: black;
+        }
+        .back{
+            display: grid;
+            grid-template-columns: repeat(3,100);
+            grid-auto-rows: 100px;
+            gap : 20px 20px;
+            width: 500px;
+            height: 370px;
+            grid-template-areas: 
+                "box1 box1 box2 box2"
+                "box1 box1 box3 box4"
+                "box5 box5 box3 box4";
+            
+            background-color: black;
+            
+        }
+        .back div{
+            align-items: center;
+            background-color: yellow;
+            text-align: center;
+        }
+        .item1{
+            grid-area: box1;
+        }
+        .item2{
+            grid-area: box2;
+        }
+        .item3{
+            grid-area: box3;
+        }
+        .item4{
+            grid-area: box4;
+        }
+        .item5{
+            grid-area: box5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="set">
+        <div class="back">
+            <div class="item1">1</div>
+            <div class="item2">2</div>
+            <div class="item3">3</div>
+            <div class="item4">4</div>
+            <div class="item5">5</div>
+        </div>
+    </div>
+</body>
+</html>
